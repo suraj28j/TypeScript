@@ -8,7 +8,6 @@ npx tsc index.ts  // for locally complie
 // [ run TypeScript file ]
 node index.ts
 
-
 // [tsconfig file]
 tsc --init
 
