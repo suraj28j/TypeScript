@@ -138,7 +138,7 @@ expressions, and function return values based on their usage and context in the 
 // [ array ]
 
 // using square brackets
-// let nums: number[] = [1, 2, 3, 4, 5]
+let nums: number[] = [1, 2, 3, 4, 5]
 // nums = ["SK"]; // invalid
 
 // using Array contructor
@@ -150,3 +150,26 @@ expressions, and function return values based on their usage and context in the 
 // console.log(nums[2]);
 // console.log(users.length);
 
+// let numsMultiBy10: number[] = nums.map((Elm: number) => Elm * 10)
+// console.log(numsMultiBy10);
+
+
+// ---------------------------------------------------------------- //
+// [ Object ]
+
+let person: {
+    name: string;
+    age: number;
+    isLogin: boolean;
+    address: { city: string; country: string }
+} = {
+    name: "Suraj",
+    age: 35,
+    isLogin: true,
+    address: {
+        city: "Banngalore",
+        country: "India"
+    }
+}
+
+// person.address.city = 35// not allow
