@@ -57,10 +57,10 @@
 // we will see any type when we first write the code
 
 
-// use case 
+// use case
 // [ Any ]
 // Working with Dynamic data : when dealing with data from dynamic source like user input, network response, or deserialized JSON objects, the any type can be useful.
-/* Migration from JavaScript: when migrating an existing JavaScript code to TypeScript, 
+/* Migration from JavaScript: when migrating an existing JavaScript code to TypeScript,
 using the any type can be a convenient way to quickly annotate variable and function without immediately specifying their precise type */
 
 // let myFavNum: any = 5;
@@ -68,13 +68,13 @@ using the any type can be a convenient way to quickly annotate variable and func
 
 // [ Unkown ]
 // The unknown type is a safer-alternative to any because it still enforces type checking and type safety
-// Variable of type unknown can hold values of any type, but you must perform type checks or type assertions before using them in specific ways.  
+// Variable of type unknown can hold values of any type, but you must perform type checks or type assertions before using them in specific ways.
 
 
 // let myFavNum2 = 10;
 
 // [ type checking ] //
-// let myFavNum2 = true; 
+// let myFavNum2 = true;
 
 // [ type safety ] //
 // myFavNum2.map(()=>{
@@ -120,8 +120,33 @@ using the any type can be a convenient way to quickly annotate variable and func
 // ---------------------------------------------------------------- //
 
 // [ Type inference ]
-/* Type inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine and assign type types to variable, 
+/* Type inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine and assign type types to variable,
 expressions, and function return values based on their usage and context in the code. */
 
 // let myNum = 28;
 // myNum = "Suraj"
+
+
+// ---------------------------------------------------------------- //
+// [ Optional and Default Parameters ]
+
+// const greet = (name: string, id: number = 23): string => `Welcome ${name} your Id is ${id}`
+// console.log(greet("Suraj"));
+
+
+// ---------------------------------------------------------------- //
+// [ array ]
+
+// using square brackets
+// let nums: number[] = [1, 2, 3, 4, 5]
+// nums = ["SK"]; // invalid
+
+// using Array contructor
+// let evenNums: number[] = new Array(2, 4, 6, 8, 10);
+
+//using Array.of method
+// let users: string[] = Array.of("Suraj", "Rahul", "Rohit", "Navneet")
+
+// console.log(nums[2]);
+// console.log(users.length);
+
