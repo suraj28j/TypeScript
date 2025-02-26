@@ -85,12 +85,18 @@ using the any type can be a convenient way to quickly annotate variable and func
 // num = "SK";
 // num = true;
 
+// [ Type Narrowing ] //
 // if (typeof num === "number")
 //     console.log(num + 1);
 // else {
 //     if (typeof num === 'boolean')
 //         console.log(num);
 // }
+
+// [ Explicit Casting ] //
+// console.log((num as number) + 1);
+// console.log((num as string).toUpperCase());
+
 
 
 // ---------------------------------------------------------------- //
