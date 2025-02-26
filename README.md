@@ -28,3 +28,6 @@
 - ***any and unknown***
 - **array**
 - **object**
+---
+ ![alt types](./types.png)
+ ---
