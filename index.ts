@@ -15,8 +15,8 @@
 
 
 // ---------------------------------------------------------------- //
-
 // [ number data types ] //
+
 // number type represent numeric values, including integers and floating-point numbers //
 
 // let myAge:number = 35;
@@ -28,7 +28,6 @@
 
 
 // ---------------------------------------------------------------- //
-
 // [ string data types ] //
 
 // let firstName = "Suraj";
@@ -42,7 +41,6 @@
 
 
 // ---------------------------------------------------------------- //
-
 // [ boolean and bigInt data types ] //
 
 // let isMyNameSuraj: boolean = true
@@ -52,7 +50,8 @@
 
 
 // ---------------------------------------------------------------- //
-// difference between Any and Unkown types
+// [ difference between Any and Unkown types ] //
+
 // The any type is most flexible type in TypeScript.It essentially turn of all type checking for the variables or expressions it is apllied to.
 // we will see any type when we first write the code
 
@@ -95,8 +94,7 @@ using the any type can be a convenient way to quickly annotate variable and func
 
 
 // ---------------------------------------------------------------- //
-
-// [ Function ]
+// [ Function ] //
 
 // function isEven(num: number): boolean {
 //     if (num % 2 === 0)
@@ -118,8 +116,8 @@ using the any type can be a convenient way to quickly annotate variable and func
 
 
 // ---------------------------------------------------------------- //
+// [ Type inference ] //
 
-// [ Type inference ]
 /* Type inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine and assign type types to variable,
 expressions, and function return values based on their usage and context in the code. */
 
@@ -128,7 +126,7 @@ expressions, and function return values based on their usage and context in the 
 
 
 // ---------------------------------------------------------------- //
-// [ Optional and Default Parameters ]
+// [ Optional and Default Parameters ] //
 
 // const greet = (name: string, id: number = 23): string => `Welcome ${name} your Id is ${id}`
 // console.log(greet("Suraj"));
@@ -137,14 +135,14 @@ expressions, and function return values based on their usage and context in the 
 // ---------------------------------------------------------------- //
 // [ array ]
 
-// using square brackets
-let nums: number[] = [1, 2, 3, 4, 5]
+// using square brackets //
+// let nums: number[] = [1, 2, 3, 4, 5]
 // nums = ["SK"]; // invalid
 
-// using Array contructor
+// using Array contructor //
 // let evenNums: number[] = new Array(2, 4, 6, 8, 10);
 
-//using Array.of method
+//using Array.of method //
 // let users: string[] = Array.of("Suraj", "Rahul", "Rohit", "Navneet")
 
 // console.log(nums[2]);
@@ -155,21 +153,60 @@ let nums: number[] = [1, 2, 3, 4, 5]
 
 
 // ---------------------------------------------------------------- //
-// [ Object ]
+// [ Object ] //
 
-let person: {
-    name: string;
-    age: number;
-    isLogin: boolean;
-    address: { city: string; country: string }
-} = {
-    name: "Suraj",
-    age: 35,
-    isLogin: true,
-    address: {
-        city: "Banngalore",
-        country: "India"
-    }
-}
-
+// let person: {
+//     name: string;
+//     age: number;
+//     isLogin: boolean;
+//     address: { city: string; country: string }
+// } = {
+//     name: "Suraj",
+//     age: 35,
+//     isLogin: true,
+//     address: {
+//         city: "Bangalore",
+//         country: "India"
+//     }
+// }
 // person.address.city = 35// not allow
+
+
+// ---------------------------------------------------------------- //
+// [ Type Aliases ] //
+
+/*
+In TypeScript, a type alise is a way to give a name to a specific type or combination of types.
+It allows you to create a custom name for a type, making it easier to reuse and refer to the same type in different parts of your code.
+Type aliases provide better readability, organization and abstraction of complex types
+
+to define a type alias, you use the type keyboard folllowed by the alias nmae and the type definition
+*/
+
+// type Person = {
+//     name: string;
+//     age: number;
+//     isLogin: boolean;
+//     address: { city: string; country: string }
+// }
+
+// let person1: Person = {
+//     name: "Mukhesh Sahu",
+//     age: 42,
+//     isLogin: true,
+//     address: {
+//         city: "Meerut",
+//         country: "India"
+//     }
+// }
+
+// let person2: Person = {
+//     name: "Kamlesh Maurya",
+//     age: 39,
+//     isLogin: true,
+//     address: {
+//         city: "Lucknow",
+//         country: "India"
+//     }
+// }
+
