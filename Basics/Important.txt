@@ -1,0 +1,9 @@
+(1) Difference between Any Type and Unknow Type
+
+Any: The Flexible Type
+The any type in TypeScript allows us to use a variable as if it could be any data type. 
+We can assign any value to a variable of type any, and we can perform any operation on it without any type checking or error.
+
+Unknown: The Safe Type
+The unknown type in TypeScript is similar to the any type, as it can hold any value. 
+However, the unknown type is more restrictive than the any type, as it does not allow us to perform any operation on it without first checking its type. 
