@@ -92,7 +92,7 @@ const myPersonalInfo: Person = {
 
 /* Practice: Create User Profile
 You are given two TypeScript types: User and MyLocation. The User type represents basic user information, while the MyLocation type contains 
-details about the user's location.create a function called createUserProfile that takes a User object and a MyLocation object as arguments and 
+details about the user's location. Create a function called createUserProfile that takes a User object and a MyLocation object as arguments and 
 prints the user's name and the city they are from. 
 */
 

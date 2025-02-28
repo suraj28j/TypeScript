@@ -4,6 +4,8 @@ tsc // All file will go to complie
 tsc index.ts // // only index.ts will go to complie
 npx tsc index.ts  // for locally complie
 
+tsc --noEmitOnError index.ts (any error in ts file, js file will not create)
+
 
 // [ run TypeScript file ]
 node index.ts
