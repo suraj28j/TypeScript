@@ -33,3 +33,32 @@ function fetchUserData(url) {
     });
 }
 fetchUserData("https://api.github.com/users");
+const filterFunction = async (e) => {
+    e.preventDefault();
+    try {
+        const searchItme = getUserName.value.toLowerCase();
+        const url = "https://api.github.com/users";
+        const getUserData = await myCustomFetch(url, {});
+        const matchingUsers = getUserData.filter((user) => {
+            return user.login.toLowerCase().includes(searchItme);
+        });
+        main_container.innerHTML = '';
+        if (matchingUsers.length === 0) {
+            main_container.insertAdjacentHTML("beforeend", `
+                <div class = 'text-center'>
+                    <p>No matching user found</p>
+                </div>
+                `);
+        }
+        else {
+            for (let singleUser of matchingUsers) {
+                showResultUI(singleUser);
+            }
+        }
+    }
+    catch (error) {
+        console.log("Error : ", error);
+    }
+};
+form.addEventListener('submit', filterFunction);
+getUserName.addEventListener('input', filterFunction);

@@ -2,7 +2,6 @@ const getUserName = document.querySelector("#user") as HTMLInputElement;
 const form = document.querySelector("form") as HTMLFormElement;
 // const form: HTMLFormElement | null = document.querySelector("form"); 
 const main_container = document.querySelector(".main-container") as HTMLElement;
-
 interface UserData {
     id: number;
     login: string;
@@ -49,3 +48,42 @@ function fetchUserData(url: string) {
 }
 
 fetchUserData("https://api.github.com/users");
+
+
+
+
+
+const filterFunction  = async(e:Event) => {
+    e.preventDefault();
+    
+    try {
+        const searchItme = getUserName.value.toLowerCase();
+        const url = "https://api.github.com/users";
+
+        const getUserData = await myCustomFetch<UserData[]>(url, {});
+        const matchingUsers = getUserData.filter((user) => {
+            return user.login.toLowerCase().includes(searchItme);
+        })
+        main_container.innerHTML = ''
+
+        if (matchingUsers.length === 0) {
+            main_container.insertAdjacentHTML(
+                "beforeend",
+                `
+                <div class = 'text-center'>
+                    <p>No matching user found</p>
+                </div>
+                `
+            )
+        } else {
+            for (let singleUser of matchingUsers) {
+                showResultUI(singleUser)
+            }
+        }
+    } catch (error) {
+        console.log("Error : ", error);
+    }
+}
+
+form.addEventListener('submit',filterFunction )
+getUserName.addEventListener('input',filterFunction);
