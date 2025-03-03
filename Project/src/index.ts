@@ -53,9 +53,9 @@ fetchUserData("https://api.github.com/users");
 
 
 
-const filterFunction  = async(e:Event) => {
+const filterFunction = async (e: Event) => {
     e.preventDefault();
-    
+
     try {
         const searchItme = getUserName.value.toLowerCase();
         const url = "https://api.github.com/users";
@@ -85,5 +85,5 @@ const filterFunction  = async(e:Event) => {
     }
 }
 
-form.addEventListener('submit',filterFunction )
-getUserName.addEventListener('input',filterFunction);
+form.addEventListener('submit', filterFunction)
+getUserName.addEventListener('input', filterFunction);
