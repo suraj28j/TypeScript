@@ -1,3 +1,0 @@
-tsc index.ts --watch (only for index.ts file will go for watch)
-
-tsc -w (all file will go for watch)

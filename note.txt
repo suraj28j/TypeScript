@@ -1,18 +1,24 @@
 // [ Complie TypeScript ]
-
 tsc // All file will go to complie
 tsc index.ts // // only index.ts will go to complie
 npx tsc index.ts  // for locally complie
-
-tsc --noEmitOnError index.ts (any error in ts file, js file will not create)
 
 
 // [ run TypeScript file ]
 node index.ts
 
+
 // [tsconfig file]
 tsc --init
 
+
 "noEmitOnError": true, // uncomment this file 
-// (if any error in ts file it will not complie) 
-//  ...for compling type => tsc   ( only, not mention file name ) 
+(if any error in ts file it will not complie) 
+...for compling type => tsc   ( only, not mention file name ) 
+
+tsc --noEmitOnError index.ts (any error in ts file, js file will not create)
+
+
+//[watch]
+tsc index.ts --watch (only for index.ts file will go for watch)
+tsc -w (all file will go for watch)
