@@ -13,6 +13,8 @@
 // let myNum = 28;
 // console.log(myNum.toString());
 
+// [ type annotation ]  //
+// type annotation is a way of explicitly specifying the type of veriable,function parameter or function return value 
 
 // ---------------------------------------------------------------- //
 // [ number data types ] //

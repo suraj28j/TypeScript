@@ -1,4 +1,8 @@
-(1) Difference between Any Type and Unknow Type
+(1) Advantages of TypeScript
+It helps the TypeScript compiler to enforce type checking and provide type safety during development
+
+
+(2) Difference between Any Type and Unknow Type
 
 Any: The Flexible Type
 The any type in TypeScript allows us to use a variable as if it could be any data type. 
