@@ -18,11 +18,15 @@
     `npm install -g typescript` (install TypeScript globally)
 3. Create a file `index.ts`
 
-    
+## Execute TypeScript
+- `node index.ts`
 
 ## Complie TypeScript
 - `tsc` (all file will go for complie)
 - `tsc index.ts` (only index.ts file will go for compile)
+
+    or
+- `npx tsc index.ts`
 
 ## TypeScript File Configuration (tsconfig file)
 - tsc --init
@@ -55,10 +59,20 @@
     function sum( a: `number`, b: `number`) : `number` { return a+b; }
 
 ### 3. Difference between Any Type and Unknow Type ###
-- Any : The Flexible Type
-The any type in TypeScript allows us to use a variable as if it could be any data type. 
-We can assign any value to a variable of type any, and we can perform any operation on it without any type checking or error.
+- **Any** : The any type is the flexible type in TypeScript. It essentially turn off all type checking for the veriables or expression.
 
-- Unknown : The Safe Type
-The unknown type in TypeScript is similar to the any type, as it can hold any value. 
-However, the unknown type is more restrictive than the any type, as it does not allow us to perform any operation on it without first checking its type.
+- **Unknown** : The unknown type is a safer-alternative to any because it still enforces type checking and type safety
+
+- Example :- [ Type Checking ]
+
+    let favouriteNum = 28;
+    favouriteNum = "Suraj"; ( error :- the 'string' not assignable to type 'number )
+
+- Example :- [ Type Safty ]
+
+    let favouriteNum = 28;
+    favouriteNum.map((num)=>(...)) ( error :- map does not exist on type 'number' )
+
+
+### 4. Type Interference
+- Type Interference in TypeScript refers to the ability of the TypeScript compiler to automatically determine and assign type to variables, expressions and function return values based on their usage and context in the code
