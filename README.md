@@ -124,3 +124,54 @@ const totalPrice = (myProduct: Product) => {
 
 console.log(totalPrice(product));
 ```
+### 6. Call Signature 
+- The function call signature refers to the declaration or definition of a function, which includes the function's name, parameters and return type.It defines the structure and type information of a function without including the function's implementation or body
+- Important Note:- Call signature are typically used inside object type notations to describe the shape of function within object types
+
+```typescript
+type Student = {
+    name: string;
+    age: number;
+    gender?: string;
+    greet: (country: string) => string  // method call signature
+}
+
+const student1: Student = {
+    name: "Ravi",
+    age: 20,
+    greet: (country): string => `My name is ${student1.name} and my age is ${student1.age} and I'm from ${country}`
+}
+
+console.log(student1.greet("India"));
+```
+
+### 7. Enum
+- Enum in TypeScript are commonly used when you want represent a set of related values and choose one value from multiple options.
+Enum provide a convenient way to define a set of named values and associate then with specific meanings.
+- In TypeScript, when enum constants are not explicitly assigned numeric values, they are  automatically assigned incremental numeric values starting from 0.
+The default numeric values for the first enum constant is 0, and subsequent enum constants receive values incremented by 1. 
+
+```typescript
+enum Roles {
+    user = "user",
+    admin = "admin" 
+    }
+
+type Login = {
+    name: string;
+    email: string;
+    password: string;
+    role: Roles
+    }
+
+const user1: Login = {
+    name: "suraj",
+    email: "suraj@example.com",
+    password: "abc123",
+    role: Roles.admin
+    }
+
+const isAdmin = (user: Login) => {
+    return user.role === 'admin' ? `${user.name} allow to modify the products` : `${user.name} not allow to modify the products`;
+}
+```
