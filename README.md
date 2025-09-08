@@ -49,14 +49,35 @@
 - It helps the TypeScript compiler to enforce type checking and provide type safety during development
 
 ### 2. What is type annotation ###
-- Type annotation is a way of explicitly specifying the type of veriable,function parameter or function return value 
+- Type annotation is a way of explicitly specifying the type of veriable, function parameter or function return value 
 - Examples :-
+``` typescript
+    let num:number = 28;
 
-    let num:`number` = 28;
+    let name:string = "Suraj";
 
-    let name:`string` = "Suraj";
+    function sum( a:number, b:number) :number { return a+b; }
 
-    function sum( a: `number`, b: `number`) : `number` { return a+b; }
+    let evenNums:number[] = [2, 4, 6, 8, 10]
+
+    let person:{
+    name: string;
+    id: number;
+    isLogin: boolean;
+    address: {
+        city: string;
+        contry: string;
+    }
+} = {
+    name: "Suraj",
+    id: 101,
+    isLogin: false,
+    address: {
+        city: "Bangalore",
+        contry: "India"
+    }
+}
+```
 
 ### 3. Difference between Any Type and Unknow Type ###
 - **Any** : The any type is the flexible type in TypeScript. It essentially turn off all type checking for the veriables or expression.
@@ -64,15 +85,18 @@
 - **Unknown** : The unknown type is a safer-alternative to any because it still enforces type checking and type safety
 
 - Example :- [ Type Checking ]
-
+```javascript
     let favouriteNum = 28;
-    favouriteNum = "Suraj"; ( error :- the 'string' not assignable to type 'number )
+    favouriteNum = "Suraj"; 
+    // ( error :- the 'string' not assignable to type 'number )
+```
 
-- Example :- [ Type Safty ]
-
+- Example :- [ Type Safety ]
+```javascript
     let favouriteNum = 28;
-    favouriteNum.map((num)=>(...)) ( error :- map does not exist on type 'number' )
-
+    favouriteNum.map((num)=>(...)) 
+    // ( error :- map does not exist on type 'number' )
+```
 
 ### 4. Type Interference
 - Type Interference in TypeScript refers to the ability of the TypeScript compiler to automatically determine and assign type to variables, expressions and function return values based on their usage and context in the code

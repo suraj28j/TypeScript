@@ -14,7 +14,7 @@
 // console.log(myNum.toString());
 
 // [ type annotation ]  //
-// type annotation is a way of explicitly specifying the type of veriable,function parameter or function return value 
+// type annotation is a way of explicitly specifying the type of veriable,function parameter or function return value
 
 // ---------------------------------------------------------------- //
 // [ number data types ] //
@@ -136,8 +136,20 @@ expressions, and function return values based on their usage and context in the 
 // ---------------------------------------------------------------- //
 // [ Optional and Default Parameters ] //
 
+// Default Parameter
 // const greet = (name: string, id: number = 23): string => `Welcome ${name} your Id is ${id}`
 // console.log(greet("Suraj"));
+
+// Optional Parameter
+/*
+function greet(name: string, id?: number) {
+    if (id)
+        return `Welcome ${name} your id is ${id}`
+    else
+        return `Welcome ${name}`
+}
+console.log(greet("Suraj"));
+*/
 
 
 // ---------------------------------------------------------------- //

@@ -10,4 +10,14 @@ We can assign any value to a variable of type any, and we can perform any operat
 
 Unknown: The Safe Type
 The unknown type in TypeScript is similar to the any type, as it can hold any value. 
-However, the unknown type is more restrictive than the any type, as it does not allow us to perform any operation on it without first checking its type. 
+However, the unknown type is more restrictive than the any type, as it does not allow us to perform any operation on it without first checking its type.
+
+(3) Optional Parameter 
+Example: - 
+function greet(name:string,id?:number){
+    if(id)
+        return `Welcome ${name} your id is ${id}`
+    else
+        return `Welcome ${name}`
+}
+console.log(greet("Suraj"));
