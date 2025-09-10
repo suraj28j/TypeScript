@@ -272,6 +272,8 @@ function logAndReturn<T>(value: T): T {
      return value;
     }
     // T is a place holder 
+    
+const numberResult = logAndReturn<number>(28)
 ```
 - Example 2: -
 ```typescript
@@ -279,6 +281,9 @@ function logValues<T, U>(a: T, b: U) {
     console.log(typeof a);
     console.log(typeof b);
     }
+
+logValues<string, number>("Suraj",28)
+logValues<string, string>("Suraj","Kumar")
 ```
 - Example 3: -
 ```typescript
@@ -287,6 +292,8 @@ function fun<T, U>(a: T, b: U, c: boolean) {
     console.log(typeof b);
     console.log(typeof c);
     }
+
+fun<string, number>("Suraj",28,true)
 ```
 
 ### 10. Interface
